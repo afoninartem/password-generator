@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__title">
+          <h1>
+            Password Generator
+          </h1>
+        </div>
+      </div>
+    </header>
+    <section class="main">
+      <div class="container">
+        <form class="form">
+          <h2 class="form__title">
+            What should your password contain?
+          </h2>
+          <div class="form__body">
+            <!-- <input type="checkbox" id="lower-case">
+            <label for="lower-case">lower case</label>
+            <input type="checkbox" id="upper-case">
+            <label for="upper-case">upper case</label>
+            <input type="checkbox" id="digits">
+            <label for="digits">digits</label>
+            <input type="checkbox" id="special-symbols">
+            <label for="special-symbols">special symbols</label> -->
+            <button class="btn" id="lower-case" onclick="toggleClassActive">lower case</button>
+            <button class="btn" id="upper-case">upper case</button>
+            <button class="btn" id="digits">digits</button>
+            <button class="btn" id="special-symbols">special symbols</button>
+          </div>
+          <input class="btn" type="submit" value="Generate!">
+        </form>
+      </div>
+    </section>
+  </div>
+  <script src="/script.js"></script>
+</body>
+
+</html>
