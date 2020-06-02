@@ -39,11 +39,14 @@ input[type="checkbox"] {
 .btn {
   font-family: 'Audiowide', cursive;
   @include adaptiv-font(36, 16);
+  padding: .5em;
+  text-align: center;
   border: none;
   background-color: transparent;
   color: #ccc;
   &:hover {
     color: rgba(81, 136, 218, 0.76);
+    cursor: pointer;
   }
 }
 
@@ -53,10 +56,10 @@ input[type="checkbox"] {
 
 .header {
   display: flex;
-  padding-top: 50px;
+  // padding-top: 30px;
   .header__title {
     @include adaptiv-font(56, 24);
-    padding: 1em;
+    padding: .9em;
   }
 }
 
@@ -66,13 +69,26 @@ input[type="checkbox"] {
     flex-direction: column;
     .form__title {
       @include adaptiv-font(42, 18);
-      padding: 1em;
+      padding: .5em;
+    }
+    .length {
+      font-family: 'Audiowide', cursive;
+      border: none;
+      color: #ccc;
+      &:hover {
+        color: rgba(81, 136, 218, 0.76);
+        cursor: pointer;
+      }
+      &:active {
+        color: rgba(81, 136, 218, 0.76);
+      }
     }
     .form__body {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       @include adaptiv-font(36, 16);
       padding: 0.8em;
+      align-items: center;
     }
   }
 }

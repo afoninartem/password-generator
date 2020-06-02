@@ -41,6 +41,8 @@ input[type="checkbox"] {
 .btn {
   font-family: 'Audiowide', cursive;
   font-size: calc(16px + 20 * ((100vw - 320px) / 960));
+  padding: .5em;
+  text-align: center;
   border: none;
   background-color: transparent;
   color: #ccc;
@@ -48,6 +50,7 @@ input[type="checkbox"] {
 
 .btn:hover {
   color: rgba(81, 136, 218, 0.76);
+  cursor: pointer;
 }
 
 .active {
@@ -58,12 +61,11 @@ input[type="checkbox"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 50px;
 }
 
 .header .header__title {
   font-size: calc(24px + 32 * ((100vw - 320px) / 960));
-  padding: 1em;
+  padding: .9em;
 }
 
 .main .form {
@@ -78,7 +80,22 @@ input[type="checkbox"] {
 
 .main .form .form__title {
   font-size: calc(18px + 24 * ((100vw - 320px) / 960));
-  padding: 1em;
+  padding: .5em;
+}
+
+.main .form .length {
+  font-family: 'Audiowide', cursive;
+  border: none;
+  color: #ccc;
+}
+
+.main .form .length:hover {
+  color: rgba(81, 136, 218, 0.76);
+  cursor: pointer;
+}
+
+.main .form .length:active {
+  color: rgba(81, 136, 218, 0.76);
 }
 
 .main .form .form__body {
@@ -88,4 +105,7 @@ input[type="checkbox"] {
       grid-template-columns: repeat(2, 1fr);
   font-size: calc(16px + 20 * ((100vw - 320px) / 960));
   padding: 0.8em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
