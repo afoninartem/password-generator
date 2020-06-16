@@ -26,32 +26,23 @@
         <form class="form">
           <h2 class="form__title">
             Please choose desired length:
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-            <select id="length" class="length" onclick="goActive()">
-              <option value="6">6</option>
-              <option value="8">8</option>
-              <option value="10">10</option>
-              <option value="12">12</option>
+            <select size="4" id="length" class="length" onclick="goActive()" required>
+              <option class="option" value="6">6</option>
+              <option class="option" value="8">8</option>
+              <option class="option" value="10">10</option>
+              <option class="option" value="12">12</option>
             </select>
           </h2>
           <h2 class="form__title">
             What should your password contain?
           </h2>
           <div class="form__body">
-            <div class="btn">
-              lower case
-            </div>
-            <div class="btn">
-              upper case
-            </div>
-            <div class="btn">
-              digits
-            </div>
-            <div class="btn">
-              special symbols
-            </div>
+            <button id="lower" class="btn">lower case</button>
+            <button id="upper" class="btn">upper case</button>
+            <button id="digits" class="btn">digits</button>
+            <button id="symbols" class="btn">symbols</button>
           </div>
-          <input class="btn" type="submit" value="Generate!">
+          <button id="generator" class="btn" type="submit">Generate!</button>
         </form>
       </div>
     </section>
