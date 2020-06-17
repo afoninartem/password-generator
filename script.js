@@ -1,12 +1,9 @@
-const btns = Array.from(document.querySelectorAll('.btn'));
-btns.splice(btns.length-1);
-console.log(btns);
-btns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    btn.classList.toggle('active');
+//length 
+console.log(1)
+const lengthList = document.querySelectorAll('.length-case');
+lengthList.forEach(el => {
+  el.addEventListener('click', function(e){
+    el.classList.add('active');
+    console.log(el.classList)
   })
 });
-
-const goActive = () => {
-  document.querySelector('#length').classList.add('active');
-}
