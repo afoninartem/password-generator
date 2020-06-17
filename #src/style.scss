@@ -20,14 +20,14 @@ body {
   @include adaptiv-font(36, 16);
 }
 
-input[type="checkbox"] {
-  display: none;
-}
 
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
+  justify-content: space-between;
+  padding: 50px 0;
 }
 
 .container {
@@ -37,58 +37,80 @@ input[type="checkbox"] {
 }
 
 .btn {
-  font-family: 'Audiowide', cursive;
-  @include adaptiv-font(36, 16);
-  padding: .5em;
-  text-align: center;
+  background: transparent;
   border: none;
-  background-color: transparent;
-  color: #ccc;
+  font-family: inherit;
+  font-size: inherit;
   &:hover {
-    color: rgba(81, 136, 218, 0.76);
-    cursor: pointer;
+    color: rgba(50, 120, 224, 0.562);
   }
 }
 
 .active {
-  color: rgba(81, 136, 218, 0.76);
+  color: rgba(50, 120, 224, 0.350);
 }
 
-.header {
-  display: flex;
-  // padding-top: 30px;
-  .header__title {
-    @include adaptiv-font(56, 24);
-    padding: .9em;
+.option {
+  cursor: pointer;
+  &:checked {
+    background: rgb(50, 120, 224);
+    color: white;
   }
 }
 
+.header {
+  margin-bottom: 50px;
+}
+
 .main {
+  display: flex;
+  flex: 1;
   .form {
     display: flex;
     flex-direction: column;
-    .form__title {
-      @include adaptiv-font(42, 18);
-      padding: .5em;
-    }
-    .length {
-      font-family: 'Audiowide', cursive;
-      border: none;
-      color: #ccc;
-      &:hover {
-        color: rgba(81, 136, 218, 0.76);
-        cursor: pointer;
-      }
-      &:active {
-        color: rgba(81, 136, 218, 0.76);
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    #length {
+      display: flex;
+      flex-direction: row;
+      flex-basis: auto;
+      justify-content: space-between;
+      .length-case {
+        padding: .3em;
       }
     }
     .form__body {
       display: grid;
+      gap: 2em;
       grid-template-columns: repeat(2, 1fr);
-      @include adaptiv-font(36, 16);
-      padding: 0.8em;
-      align-items: center;
     }
   }
+}
+
+.result {
+  display: none;
+  .result__body {
+    padding: .5em;
+  }
+  .result__btns {
+    display: flex;
+    justify-content: space-evenly;
+    .btn {
+      padding: .3em;
+    }
+  }
+}
+
+.generated {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  align-self: center;
+  justify-self: center;
+  background: rgb(69, 81, 100);
+  font-size: 56px;
+  padding: .5em;
 }

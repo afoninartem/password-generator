@@ -26,37 +26,54 @@
         <form class="form">
           <h2 class="form__title">
             Please choose desired length:
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-            <select id="length" class="length" onclick="goActive()">
-              <option value="6">6</option>
-              <option value="8">8</option>
-              <option value="10">10</option>
-              <option value="12">12</option>
-            </select>
           </h2>
+          <ul id="length" aria-required="true">
+            <li>
+              <button type="button" class="length-case btn">6</button>
+            </li>
+            <li>
+              <button type="button" class="length-case btn">8</button>
+            </li>
+            <li>
+              <button  type="button"class="length-case btn">10</button>
+            </li>
+            <li>
+              <button type="button" class="length-case btn">12</button>
+            </li>
+            <li>
+              <button type="button" class="length-case btn">16</button>
+            </li>
+            <li>
+              <button type="button" class="length-case btn">24</button>
+            </li>
+            <li>
+              <button type="button" class="length-case btn">32</button>
+            </li>
+          </ul>
           <h2 class="form__title">
             What should your password contain?
           </h2>
           <div class="form__body">
-            <div class="btn">
-              lower case
-            </div>
-            <div class="btn">
-              upper case
-            </div>
-            <div class="btn">
-              digits
-            </div>
-            <div class="btn">
-              special symbols
-            </div>
+            <button type="button" id="lower" class="btn symbols-option">lower case</button>
+            <button type="button" id="upper" class="btn symbols-option">upper case</button>
+            <button type="button" id="digits" class="btn symbols-option">digits</button>
+            <button type="button" id="symbols" class="btn symbols-option">symbols</button>
           </div>
-          <input class="btn" type="submit" value="Generate!">
+          <button type="button" id="generator" class="btn" type="submit">Generate!</button>
         </form>
       </div>
     </section>
+    <div class="result">
+      <div class="result__body"></div>
+      <div class="result__btns">
+        <button type="button" class="btn" id="ok">OK</button>
+        <button type="button" class="btn" id="download">Download</button>
+        <button type="button" class="btn" id="send">Send</button>
+      </div>
+      
+    </div>
   </div>
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

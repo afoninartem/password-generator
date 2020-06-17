@@ -15,10 +15,6 @@ body {
   font-size: calc(16px + 20 * ((100vw - 320px) / 960));
 }
 
-input[type="checkbox"] {
-  display: none;
-}
-
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,6 +26,11 @@ input[type="checkbox"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 50px 0;
 }
 
 .container {
@@ -39,33 +40,40 @@ input[type="checkbox"] {
 }
 
 .btn {
-  font-family: 'Audiowide', cursive;
-  font-size: calc(16px + 20 * ((100vw - 320px) / 960));
-  padding: .5em;
-  text-align: center;
+  background: transparent;
   border: none;
-  background-color: transparent;
-  color: #ccc;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .btn:hover {
-  color: rgba(81, 136, 218, 0.76);
-  cursor: pointer;
+  color: rgba(50, 120, 224, 0.562);
 }
 
 .active {
-  color: rgba(81, 136, 218, 0.76);
+  color: rgba(50, 120, 224, 0.35);
+}
+
+.option {
+  cursor: pointer;
+}
+
+.option:checked {
+  background: #3278e0;
+  color: white;
 }
 
 .header {
+  margin-bottom: 50px;
+}
+
+.main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.header .header__title {
-  font-size: calc(24px + 32 * ((100vw - 320px) / 960));
-  padding: .9em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .main .form {
@@ -76,36 +84,82 @@ input[type="checkbox"] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
 }
 
-.main .form .form__title {
-  font-size: calc(18px + 24 * ((100vw - 320px) / 960));
-  padding: .5em;
+.main .form #length {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.main .form .length {
-  font-family: 'Audiowide', cursive;
-  border: none;
-  color: #ccc;
-}
-
-.main .form .length:hover {
-  color: rgba(81, 136, 218, 0.76);
-  cursor: pointer;
-}
-
-.main .form .length:active {
-  color: rgba(81, 136, 218, 0.76);
+.main .form #length .length-case {
+  padding: .3em;
 }
 
 .main .form .form__body {
   display: -ms-grid;
   display: grid;
+  gap: 2em;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  font-size: calc(16px + 20 * ((100vw - 320px) / 960));
-  padding: 0.8em;
+}
+
+.result {
+  display: none;
+}
+
+.result .result__body {
+  padding: .5em;
+}
+
+.result .result__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.result .result__btns .btn {
+  padding: .3em;
+}
+
+.generated {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
+  background: #455164;
+  font-size: 56px;
+  padding: .5em;
 }
