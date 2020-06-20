@@ -16,10 +16,9 @@ html {
 }
 
 body {
-  font-family: 'Audiowide', cursive;
+  font-family: "Audiowide", cursive;
   @include adaptiv-font(36, 16);
 }
-
 
 .wrapper {
   display: flex;
@@ -28,6 +27,9 @@ body {
   height: 100vh;
   justify-content: space-between;
   padding: 50px 0;
+  @media screen and (max-width: 376px) and (orientation: landscape) {
+    padding: 0;
+  }
 }
 
 .container {
@@ -47,7 +49,7 @@ body {
 }
 
 .active {
-  color: rgba(50, 120, 224, 0.350);
+  color: rgba(50, 120, 224, 0.35);
 }
 
 .option {
@@ -60,11 +62,17 @@ body {
 
 .header {
   margin-bottom: 50px;
+  .header__title {
+    @media screen and (max-width: 376px) and (orientation: landscape) {
+      display: none;
+    }
+  }
 }
 
 .main {
   display: flex;
   flex: 1;
+  height: 100%;
   .form {
     display: flex;
     flex-direction: column;
@@ -72,14 +80,21 @@ body {
     align-items: center;
     flex: 1;
     height: 100%;
+    @media screen and (max-width: 376px) {
+      height: 80%;
+    }
     #length {
       display: flex;
       flex-direction: row;
       flex-basis: auto;
       justify-content: space-between;
+      width: 80%;
       .length-case {
-        padding: .3em;
+        padding: 0.3em;
       }
+    }
+    .form__title {
+      text-align: center;
     }
     .form__body {
       display: grid;
@@ -91,19 +106,25 @@ body {
 
 .result {
   display: none;
+  opacity: 0;
+  transition: .5s;
+  visibility: hidden;
   .result__body {
-    padding: .5em;
+    padding: 0.5em;
   }
   .result__btns {
     display: flex;
     justify-content: space-evenly;
     .btn {
-      padding: .3em;
+      padding: 0.3em;
     }
   }
 }
 
+
 .generated {
+  opacity: 1;
+  visibility: visible;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,5 +133,5 @@ body {
   justify-self: center;
   background: rgb(69, 81, 100);
   font-size: 56px;
-  padding: .5em;
+  padding: 0.5em;
 }
