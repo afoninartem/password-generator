@@ -12,7 +12,7 @@ html {
 
 body {
   font-family: "Audiowide", cursive;
-  font-size: calc(16px + 20 * ((100vw - 320px) / 960));
+  font-size: 36px;
 }
 
 .wrapper {
@@ -50,14 +50,15 @@ body {
   border: none;
   font-family: inherit;
   font-size: inherit;
+  color: #666;
 }
 
 .btn:hover {
-  color: rgba(50, 120, 224, 0.562);
+  color: rgba(50, 120, 224, 0.35);
 }
 
 .active {
-  color: rgba(50, 120, 224, 0.35);
+  color: rgba(50, 120, 224, 0.562);
 }
 
 .option {
@@ -70,7 +71,11 @@ body {
 }
 
 .header {
-  margin-bottom: 50px;
+  margin-bottom: 1.2em;
+}
+
+.header .header__title {
+  font-size: 42px;
 }
 
 @media screen and (max-width: 376px) and (orientation: landscape) {
@@ -115,6 +120,25 @@ body {
   }
 }
 
+.main .form .form-block {
+  padding: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .form .form-block .form__title {
+  text-align: center;
+  padding: 0.2em;
+}
+
 .main .form #length {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -129,22 +153,16 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 80%;
-}
-
-.main .form #length .length-case {
-  padding: 0.3em;
-}
-
-.main .form .form__title {
-  text-align: center;
+  padding: 0.4em;
 }
 
 .main .form .form__body {
   display: -ms-grid;
   display: grid;
-  gap: 2em;
+  gap: .5em;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  margin: 0.4em;
 }
 
 .result {
@@ -172,6 +190,10 @@ body {
   padding: 0.3em;
 }
 
+#generator {
+  font-size: 42px;
+}
+
 .generated {
   opacity: 1;
   visibility: visible;
@@ -192,4 +214,33 @@ body {
   background: #455164;
   font-size: 56px;
   padding: 0.5em;
+}
+
+.language {
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: -4em;
+  right: 50px;
+  background: #455164;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.language .lang {
+  padding: 0.5em;
+}
+
+.language .language__icon:hover {
+  -webkit-transform: translateY(4em);
+          transform: translateY(4em);
 }

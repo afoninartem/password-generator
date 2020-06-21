@@ -1,9 +1,9 @@
-$maxWidth: 1280;
-@mixin adaptiv-font($pcSize, $mobSize) {
-  $addSize: $pcSize - $mobSize;
-  $maxWidth: $maxWidth - 320;
-  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
-}
+// $maxWidth: 1280;
+// @mixin adaptiv-font($pcSize, $mobSize) {
+//   $addSize: $pcSize - $mobSize;
+//   $maxWidth: $maxWidth - 320;
+//   font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+// }
 
 html {
   box-sizing: border-box;
@@ -17,7 +17,7 @@ html {
 
 body {
   font-family: "Audiowide", cursive;
-  @include adaptiv-font(36, 16);
+  font-size: 36px;
 }
 
 .wrapper {
@@ -43,13 +43,14 @@ body {
   border: none;
   font-family: inherit;
   font-size: inherit;
+  color: #666;
   &:hover {
-    color: rgba(50, 120, 224, 0.562);
+    color: rgba(50, 120, 224, 0.35);
   }
 }
 
 .active {
-  color: rgba(50, 120, 224, 0.35);
+  color: rgba(50, 120, 224, 0.562);
 }
 
 .option {
@@ -61,8 +62,9 @@ body {
 }
 
 .header {
-  margin-bottom: 50px;
+  margin-bottom: 1.2em;
   .header__title {
+    font-size: 42px;
     @media screen and (max-width: 376px) and (orientation: landscape) {
       display: none;
     }
@@ -83,23 +85,32 @@ body {
     @media screen and (max-width: 376px) {
       height: 80%;
     }
+    .form-block {
+      padding: 0.5em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .form__title {
+        text-align: center;
+        padding: 0.2em;
+        // @media screen and (max-width:320px) {
+
+        // }
+      }
+    }
     #length {
       display: flex;
       flex-direction: row;
       flex-basis: auto;
       justify-content: space-between;
       width: 80%;
-      .length-case {
-        padding: 0.3em;
-      }
-    }
-    .form__title {
-      text-align: center;
+      padding: 0.4em;
     }
     .form__body {
       display: grid;
-      gap: 2em;
+      gap: .5em;
       grid-template-columns: repeat(2, 1fr);
+      margin: 0.4em;
     }
   }
 }
@@ -121,6 +132,9 @@ body {
   }
 }
 
+#generator {
+  font-size: 42px;
+}
 
 .generated {
   opacity: 1;
@@ -134,4 +148,27 @@ body {
   background: rgb(69, 81, 100);
   font-size: 56px;
   padding: 0.5em;
+}
+
+//language menu
+
+.language {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: -4em;
+  right: 50px;
+  background: rgb(69, 81, 100);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  .lang {
+    padding: 0.5em;
+  }
+  .language__icon {
+    &:hover {
+      transform: translateY(4em);
+    }
+  }
 }

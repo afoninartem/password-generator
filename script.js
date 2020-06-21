@@ -100,3 +100,5 @@ document.querySelector('#download').onclick = function () {
 document.querySelector('#close').onclick = function () {
   document.querySelector('.result').classList.remove('generated');
 }
+
+//language

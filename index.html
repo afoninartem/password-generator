@@ -14,6 +14,17 @@
   <div class="wrapper">
     <header class="header">
       <div class="container">
+        <div class="language">
+          <div class="eng lang">
+            ENG
+          </div>
+          <div class="rus lang">
+            RUS
+          </div>
+          <div class="language__icon lang">
+            Language
+          </div>
+        </div>
         <div class="header__title">
           <h1>
             Password Generator
@@ -24,35 +35,35 @@
     <section class="main">
       <div class="container">
         <form class="form">
-          <h2 class="form__title">
-            Please choose desired length:
-          </h2>
-          <div class="error">
-            
+          <div class="form-block block-1">
+            <h2 class="form__title">
+              Please choose desired length:
+            </h2>
+            <ul id="length" aria-required="true" required>
+              <li>
+                <button type="button" class="length-case btn">6</button>
+              </li>
+              <li>
+                <button type="button" class="length-case btn">8</button>
+              </li>
+              <li>
+                <button type="button" class="length-case btn">10</button>
+              </li>
+              <li>
+                <button type="button" class="length-case btn">12</button>
+              </li>
+              <li>
+                <button type="button" class="length-case btn">16</button>
+              </li>
+              <li>
+                <button type="button" class="length-case btn">24</button>
+              </li>
+              <li>
+                <button type="button" class="length-case btn">32</button>
+              </li>
+            </ul>
           </div>
-          <ul id="length" aria-required="true" required>
-            <li>
-              <button type="button" class="length-case btn">6</button>
-            </li>
-            <li>
-              <button type="button" class="length-case btn">8</button>
-            </li>
-            <li>
-              <button type="button" class="length-case btn">10</button>
-            </li>
-            <li>
-              <button type="button" class="length-case btn">12</button>
-            </li>
-            <li>
-              <button type="button" class="length-case btn">16</button>
-            </li>
-            <li>
-              <button type="button" class="length-case btn">24</button>
-            </li>
-            <li>
-              <button type="button" class="length-case btn">32</button>
-            </li>
-          </ul>
+          <div class="form-block block-2">
           <h2 class="form__title">
             What should your password contain?
           </h2>
@@ -62,18 +73,19 @@
             <button type="button" id="digits" class="btn symbols-option">digits</button>
             <button type="button" id="symbols" class="btn symbols-option">symbols</button>
           </div>
+        </div>
           <button type="button" id="generator" class="btn" type="submit">Generate!</button>
         </form>
       </div>
     </section>
-      <div class="result">
-        <div class="result__body"></div>
-        <div class="result__btns">
-          <button type="button" class="btn" id="copy" onclick="copyToClipboard()">Copy</button>
-          <button type="button" class="btn" id="download">Download</button>
-          <button type="button" class="btn" id="close">Close</button>
-        </div>
+    <div class="result">
+      <div class="result__body"></div>
+      <div class="result__btns">
+        <button type="button" class="btn" id="copy" onclick="copyToClipboard()">Copy</button>
+        <button type="button" class="btn" id="download">Download</button>
+        <button type="button" class="btn" id="close">Close</button>
       </div>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
