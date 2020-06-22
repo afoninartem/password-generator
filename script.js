@@ -101,4 +101,15 @@ document.querySelector('#close').onclick = function () {
   document.querySelector('.result').classList.remove('generated');
 }
 
-//language
+//language switch
+const langs = document.querySelectorAll('.js-lang');
+langs.forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    langs.forEach(btn => btn.classList.remove('local-active'));
+    btn.classList.add('local-active');
+  });
+});
+
+//language content 
+const texts = document.querySelectorAll('.text');
+

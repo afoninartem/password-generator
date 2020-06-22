@@ -158,17 +158,30 @@ body {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: -4em;
+  color: #ffffff;
+  top: -5em;
   right: 50px;
   background: rgb(69, 81, 100);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  transition: top 0.5s ease-out 0.2s;
   .lang {
     padding: 0.5em;
   }
-  .language__icon {
+  &:hover {
+    top: 0;
+    cursor: default;
+  }
+  .btn {
+    color: #ffffff;
     &:hover {
-      transform: translateY(4em);
+      color: rgba(36, 139, 235, 0.849);
+      cursor: pointer;
     }
   }
+  .local-active {
+    font-weight: 900;
+    color: rgba(255, 0, 0, 0.781);
+  }
 }
+

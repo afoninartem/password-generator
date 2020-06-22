@@ -16,17 +16,17 @@
       <div class="container">
         <div class="language">
           <div class="eng lang">
-            ENG
+            <button type="button" class="js-lang btn local-active" id="eng">ENG</button>
           </div>
           <div class="rus lang">
-            RUS
+            <button type="button" class="js-lang btn" id="rus">RUS</button>
           </div>
-          <div class="language__icon lang">
+          <div class="language__icon lang text">
             Language
           </div>
         </div>
         <div class="header__title">
-          <h1>
+          <h1 class="text">
             Password Generator
           </h1>
         </div>
@@ -36,7 +36,7 @@
       <div class="container">
         <form class="form">
           <div class="form-block block-1">
-            <h2 class="form__title">
+            <h2 class="form__title text">
               Please choose desired length:
             </h2>
             <ul id="length" aria-required="true" required>
@@ -64,7 +64,7 @@
             </ul>
           </div>
           <div class="form-block block-2">
-          <h2 class="form__title">
+          <h2 class="form__title text">
             What should your password contain?
           </h2>
           <div class="form__body">
@@ -74,7 +74,7 @@
             <button type="button" id="symbols" class="btn symbols-option">symbols</button>
           </div>
         </div>
-          <button type="button" id="generator" class="btn" type="submit">Generate!</button>
+          <button type="button" id="generator" class="btn text" type="submit">Generate!</button>
         </form>
       </div>
     </section>
