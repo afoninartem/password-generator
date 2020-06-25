@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Password Generator</title>
   <link rel="stylesheet" href="./css/reset.css">
-  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -16,10 +16,10 @@
       <div class="container">
         <div class="language">
           <div class="eng lang">
-            <button type="button" class="js-lang btn local-active" id="eng">ENG</button>
+            <button type="button" class="js-lang btn local-active" id="eng">English</button>
           </div>
           <div class="rus lang">
-            <button type="button" class="js-lang btn" id="rus">RUS</button>
+            <button type="button" class="js-lang btn" id="rus">Russian</button>
           </div>
           <div class="language__icon lang text">
             Language
@@ -36,12 +36,12 @@
       <div class="container">
         <form class="form">
           <div class="form-block block-1">
-            <h2 class="form__title text">
+            <h2 class="form__title text" id="length__titile">
               Please choose desired length:
             </h2>
             <ul id="length" aria-required="true" required>
               <li>
-                <button type="button" class="length-case btn">6</button>
+                <button type="button" class="length-case btn length-active">6</button>
               </li>
               <li>
                 <button type="button" class="length-case btn">8</button>
@@ -64,11 +64,11 @@
             </ul>
           </div>
           <div class="form-block block-2">
-          <h2 class="form__title text">
+          <h2 class="form__title text" id="content">
             What should your password contain?
           </h2>
           <div class="form__body">
-            <button type="button" id="lower" class="btn symbols-option">lower case</button>
+            <button type="button" id="lower" class="btn symbols-option option-active">lower case</button>
             <button type="button" id="upper" class="btn symbols-option">upper case</button>
             <button type="button" id="digits" class="btn symbols-option">digits</button>
             <button type="button" id="symbols" class="btn symbols-option">symbols</button>
@@ -85,6 +85,10 @@
         <button type="button" class="btn" id="download">Download</button>
         <button type="button" class="btn" id="close">Close</button>
       </div>
+    </div>
+    <div class="error-message">
+      <div class="message__body">Please choose password's length</div>
+      <button type="button" class="btn" id="ok">Ok</button>
     </div>
   </div>
   <script src="script.js"></script>

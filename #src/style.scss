@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: "Audiowide", cursive;
+  font-family: 'Montserrat', sans-serif;
   font-size: 36px;
 }
 
@@ -49,7 +49,11 @@ body {
   }
 }
 
-.active {
+.length-active {
+  color: rgba(50, 120, 224, 0.562);
+}
+
+.option-active {
   color: rgba(50, 120, 224, 0.562);
 }
 
@@ -117,9 +121,9 @@ body {
 
 .result {
   display: none;
-  opacity: 0;
-  transition: .5s;
-  visibility: hidden;
+  // opacity: 0;
+  // transition: .5s;
+  // visibility: hidden;
   .result__body {
     padding: 0.5em;
   }
@@ -132,13 +136,17 @@ body {
   }
 }
 
+.error-message {
+  display: none;
+}
+
 #generator {
   font-size: 42px;
 }
 
 .generated {
-  opacity: 1;
-  visibility: visible;
+  // opacity: 1;
+  // visibility: visible;
   display: flex;
   flex-direction: column;
   align-items: center;
